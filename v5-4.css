@@ -30,3 +30,12 @@
   .brand img{height:24px;max-width:210px}.display{font-size:40px}.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn{width:100%}.hero-proof{display:grid;grid-template-columns:1fr;text-align:left;max-width:270px;margin-left:auto;margin-right:auto}.product-stage{min-height:315px}.phone-window{width:104px;right:6px}.terminal-body{height:230px}.chart-svg{height:160px}.trust-items{grid-template-columns:1fr 1fr}.card.featured{min-height:285px}.card.featured .feature-art{width:54%;height:38%}.footer-grid{grid-template-columns:1fr}.footer-brand{grid-column:auto}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.reveal,.stagger>*{opacity:1!important;transform:none!important;transition:none!important}.btn:hover,.card:hover{transform:none!important}}
+
+/* Apple-style typography system: SF Pro when available, native fallbacks elsewhere */
+:root{
+  --apple-text:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --apple-display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+body,button,input,textarea,select,.nav,.mobile-panel,.footer{font-family:var(--apple-text)}
+h1,h2,h3,h4,.display,.h1,.h2,.h3,.card h3,.cta-box h2{font-family:var(--apple-display);letter-spacing:-.028em}
+body{font-feature-settings:"kern" 1,"liga" 1}
