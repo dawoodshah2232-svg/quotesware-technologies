@@ -13,6 +13,9 @@ HEADER = """<header class="site-header">
         <div class="drop" role="menu">
           <a href="platform.html"><span><b>Trading Platform</b><span>The connected Orbit ecosystem</span></span></a>
           <a href="trader.html"><span><b>Orbit Trader</b><span>Charts, orders, positions — web, Android, Windows</span></span></a>
+          <a href="web-terminal.html"><span><b>Web Terminal</b><span>Zero-install browser trading</span></span></a>
+          <a href="mobile.html"><span><b>Mobile</b><span>Orbit Trader for Android</span></span></a>
+          <a href="algo.html"><span><b>Algo & Automation</b><span>Bots, testing and automation roadmap</span></span></a>
           <a href="manager.html"><span><b>Orbit Manager</b><span>Clients, exposure, dealing, reporting</span></span></a>
           <a href="administrator.html"><span><b>Orbit Administrator</b><span>Symbols, groups, permissions, infrastructure</span></span></a>
           <a href="white-label.html"><span><b>White Label</b><span>Your brand on Orbit technology</span></span></a>
@@ -45,6 +48,10 @@ HEADER = """<header class="site-header">
     <a class="mlink" href="manager.html">Orbit Manager</a>
     <a class="mlink" href="administrator.html">Orbit Administrator</a>
     <a class="mlink" href="white-label.html">White Label</a>
+    <a class="mlink" href="web-terminal.html">Web Terminal</a>
+    <a class="mlink" href="mobile.html">Mobile</a>
+    <a class="mlink" href="algo.html">Algo & Automation</a>
+    <a class="mlink" href="news.html">News</a>
     <a class="mlink" href="connectivity.html">Connectivity</a>
     <a class="mlink" href="developers.html">Developers</a>
     <a class="mlink" href="security.html">Security</a>
@@ -62,12 +69,12 @@ FOOTER = """<footer>
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand"><img src="assets/logo-light.png" alt="QuotesWare Technologies" width="172" height="42"><p>Modern trading technology: Orbit Trader for traders, Orbit Manager and Administrator for brokerages.</p></div>
-      <div class="foot-col"><h4>Products</h4><a href="trader.html">Orbit Trader</a><a href="manager.html">Orbit Manager</a><a href="administrator.html">Orbit Administrator</a><a href="white-label.html">White Label</a></div>
+      <div class="foot-col"><h4>Products</h4><a href="trader.html">Orbit Trader</a><a href="web-terminal.html">Web Terminal</a><a href="mobile.html">Mobile</a><a href="manager.html">Orbit Manager</a><a href="administrator.html">Orbit Administrator</a><a href="algo.html">Algo & Automation</a><a href="white-label.html">White Label</a></div>
       <div class="foot-col"><h4>Technology</h4><a href="connectivity.html">Connectivity</a><a href="developers.html">Developer Platform</a><a href="security.html">Security</a><a href="downloads.html">Downloads</a></div>
       <div class="foot-col"><h4>Business</h4><a href="brokers.html">For Brokers</a><a href="contact.html">Request Demo</a><a href="resources.html">Resources</a></div>
-      <div class="foot-col"><h4>Company</h4><a href="company.html">About QuotesWare</a><a href="resources.html#roadmap">Roadmap</a><a href="contact.html">Contact</a></div>
+      <div class="foot-col"><h4>Company</h4><a href="company.html">About QuotesWare</a><a href="news.html">News</a><a href="careers.html">Careers</a><a href="media.html">Media Kit</a><a href="resources.html#roadmap">Roadmap</a><a href="contact.html">Contact</a></div>
     </div>
-    <div class="foot-base"><span>&copy; <span data-year>2026</span> QuotesWare Technologies. All rights reserved.</span><span><a href="contact.html" style="color:rgba(255,255,255,.72)">Contact</a> &middot; <a href="security.html" style="color:rgba(255,255,255,.72)">Security</a></span></div>
+    <div class="foot-base"><span>&copy; <span data-year>2026</span> QuotesWare Technologies. All rights reserved.</span><span><a href="privacy.html" style="color:rgba(255,255,255,.72)">Privacy</a> &middot; <a href="terms.html" style="color:rgba(255,255,255,.72)">Terms</a> &middot; <a href="cookies.html" style="color:rgba(255,255,255,.72)">Cookies</a></span></div>
     <p class="foot-disc">QuotesWare Technologies provides trading software technology only. It does not provide investment, brokerage, or financial services, and does not accept client funds.</p>
   </div>
 </footer>
@@ -504,3 +511,253 @@ page("contact.html",
     + band_cta("Prefer a direct conversation?", "Tell us who you are and we'll set up the right call.", "Request Product Demo", "contact.html"))
 
 print("batch 3 done")
+
+# ---------------- web-terminal.html ----------------
+page("web-terminal.html",
+    "Orbit Trader Web Terminal — Zero-Install Browser Trading",
+    "Trade from any browser with the Orbit Trader web terminal: market watch, advanced charts, order entry and positions with no install.",
+    "assets/products/crop-trader-laptop.png",
+    hero("Web Terminal", "Orbit Trader", "The terminal,<br>in your browser.",
+         "Zero-install trading with market watch, advanced charts, order entry and positions — on any modern browser.",
+         ['<a class="btn btn-primary" href="contact.html">Request Demo</a>', '<a class="btn btn-ghost" href="trader.html">Orbit Trader</a>'],
+         "assets/products/crop-trader-laptop.png", "Orbit Trader web terminal with XAUUSD chart")
+    + """<section class="section alt"><div class="wrap">
+<div class="sec-head rv"><span class="eyebrow">Browser trading</span><h2>Nothing to install. Nothing to miss.</h2></div>
+<div class="feat-grid">"""
+    + feat("globe", "Zero Install", "Launch from your broker's domain and trade — no download, no admin rights, no updates to manage.")
+    + feat("chart", "Full Charting", "Multi-timeframe charts with indicators and drawing tools, just like desktop.")
+    + feat("bolt", "Order Entry", "Market, limit and stop orders with SL/TP, margin estimate and spread visibility.")
+    + feat("layers", "Responsive Layouts", "Adapts from ultrawide dealing screens to laptop browsers.")
+    + feat("shield", "Secure Sessions", "Encrypted sessions with timeout and re-authentication controls.")
+    + feat("phone", "Continuity", "Same watchlists, positions and orders as mobile and desktop.")
+    + """</div></div></section>"""
+    + """<section class="section tint"><div class="wrap split">
+<div class="vis rv"><img class="main" src="assets/products/orbit-trader-suite.png" alt="Orbit Trader across web, desktop and mobile" loading="lazy"></div>
+<div class="rv d1"><span class="eyebrow">Parity</span><h2>Web that keeps up with desktop.</h2>
+<p class="lede">The web terminal is a first-class trading surface — not a lite companion.</p>
+""" + checklist(["Market Watch with live bid/ask", "Advanced charts and indicators", "Order ticket with SL/TP", "Positions, orders and history"]) + """
+<a class="btn btn-primary" href="contact.html">Request Demo</a></div></div></section>"""
+    + band_cta("Trade from anywhere.", "Ask for web terminal access for your brokerage.", "Request Demo", "contact.html"))
+
+# ---------------- mobile.html ----------------
+page("mobile.html",
+    "Orbit Trader Mobile — Professional Trading on Android",
+    "Orbit Trader for Android: Market Watch, advanced charts, one-tap order entry and full position management on mobile.",
+    "assets/products/crop-phone.png",
+    hero("Mobile", "Orbit Trader", "The full terminal,<br>in your pocket.",
+         "Market Watch, charts, orders and positions on Android — professional mobile trading without compromise.",
+         ['<a class="btn btn-primary" href="contact.html">Request Demo</a>', '<a class="btn btn-ghost" href="downloads.html">Get the App</a>'],
+         "assets/products/crop-phone.png", "Orbit Trader mobile app with market watch")
+    + """<section class="section alt"><div class="wrap">
+<div class="sec-head rv"><span class="eyebrow">Mobile trading</span><h2>Built for thumbs. Serious about trading.</h2></div>
+<div class="feat-grid">"""
+    + feat("globe", "Market Watch", "Multi-asset quotes with bid/ask and change, searchable by symbol.")
+    + feat("chart", "Mobile Charts", "Candlestick charts with timeframes and indicators, optimized for touch.")
+    + feat("bolt", "One-Tap Ticket", "Sell/Buy ticket with volume, SL/TP and margin estimate.")
+    + feat("layers", "Positions", "Live positions with P/L, plus orders and history tabs.")
+    + feat("shield", "Secure Access", "Session controls designed for trading on the go.")
+    + feat("check", "Android Today", "Available for Android now — iOS is on the roadmap.")
+    + """</div></div></section>"""
+    + """<section class="section tint"><div class="wrap split flip">
+<div class="vis rv"><img class="main" src="assets/products/orbit-trader-devices.png" alt="Orbit Trader on Android and laptop" loading="lazy"></div>
+<div class="rv d1"><span class="eyebrow">Platforms</span><h2>Android now. iOS planned.</h2>
+<p class="lede">Orbit Trader mobile leads on Android, with the same account state as web and Windows.</p>
+""" + checklist(["Android app available", "Web terminal on mobile browsers", "iOS on the roadmap", "Same positions everywhere"]) + """
+<a class="btn btn-primary" href="downloads.html">Platform availability</a></div></div></section>"""
+    + band_cta("Put Orbit Trader in your clients' pockets.", "Ask about mobile distribution for your brand.", "Request Demo", "contact.html"))
+
+# ---------------- algo.html ----------------
+page("algo.html",
+    "Algo & Automation — Orbit Automation Roadmap",
+    "The Orbit automation direction: algorithmic trading, strategy testing and broker workflow automation — current status and roadmap.",
+    "assets/products/orbit-trader-suite.png",
+    hero("Algo & Automation", "Automation", "Trading,<br>automated responsibly.",
+         "Our automation direction covers algorithmic trading, strategy testing and broker workflow automation. Current status is stated honestly below.",
+         ['<a class="btn btn-primary" href="contact.html">Request Early Access</a>', '<a class="btn btn-ghost" href="developers.html">Developer Platform</a>'],
+         "assets/products/orbit-trader-suite.png", "Orbit Trader with automation roadmap")
+    + """<section class="section alt"><div class="wrap">
+<div class="sec-head rv"><span class="eyebrow">Direction</span><h2>Where automation is headed.</h2><p>These capabilities are in design or early development — marked honestly, not sold as shipped.</p></div>
+<div class="feat-grid">"""
+    + feat("code", "Trading Bots", "Automated strategies running against Orbit market data and order entry. In design.")
+    + feat("chart", "Strategy Testing", "Backtesting and optimization over historical data. On the roadmap.")
+    + feat("layers", "Indicators", "Custom indicators and drawing automation. On the roadmap.")
+    + feat("bolt", "Broker Workflows", "Event rules for onboarding, alerts and operational automation. In design.")
+    + feat("globe", "API Automation", "Available today: REST, WebSocket and webhooks for programmatic workflows.")
+    + feat("shield", "Safe by Design", "Permissions, limits and audit planned into every automation surface.")
+    + """</div></div></section>"""
+    + """<section class="section tint"><div class="wrap split">
+<div class="rv"><span class="eyebrow">Today</span><h2>Automate with APIs now.</h2>
+<p class="lede">While terminal automation is on the roadmap, the integration layer is ready for programmatic workflows today.</p>
+""" + checklist(["REST API for accounts and orders", "WebSocket for streaming data", "Webhooks for event-driven flows"]) + """
+<a class="btn btn-primary" href="developers.html">Explore the APIs</a></div>
+<div class="vis rv d1"><img class="main" src="assets/products/orbit-ecosystem-hero.png" alt="Orbit ecosystem" loading="lazy"></div>
+</div></section>"""
+    + band_cta("Follow the automation roadmap.", "Request early access and help shape what we build.", "Request Early Access", "contact.html"))
+
+# ---------------- news.html ----------------
+page("news.html",
+    "News — QuotesWare Updates & Releases",
+    "Product releases, company updates and announcements from QuotesWare Technologies.",
+    "assets/products/orbit-ecosystem-hero.png",
+    hero("News", "Newsroom", "Updates from<br>QuotesWare.",
+         "Product releases and company announcements — published when there's something real to say.",
+         [],
+         "assets/products/orbit-ecosystem-hero.png", "QuotesWare news and updates")
+    + """<section class="section alt"><div class="wrap">
+<div class="sec-head rv"><span class="eyebrow">Latest</span><h2>Release notes & announcements.</h2></div>
+<div class="fam-grid">
+<article class="fam-card rv"><div class="fam-shot"><img src="assets/products/orbit-ecosystem-hero.png" alt="QuotesWare website" loading="lazy" style="object-position:center"></div>
+<div class="fam-body"><span class="tag">4 Oct 2026</span><h3>New QuotesWare corporate website</h3><p>A rebuilt, image-led corporate site covering the Orbit product family — Trader, Manager, Administrator, white label and developer platform.</p></div></article>
+<article class="fam-card rv d1"><div class="fam-shot"><img src="assets/products/orbit-trader-suite.png" alt="Orbit Trader 5.8" loading="lazy" style="object-position:center"></div>
+<div class="fam-body"><span class="tag">4 Oct 2026</span><h3>Orbit Trader 5.8 ships</h3><p>New Android, Windows desktop and web releases of the Orbit Trader terminal.</p></div></article>
+<article class="fam-card rv d2"><div class="fam-shot"><img src="assets/products/crop-manager.png" alt="Orbit Manager" loading="lazy" style="object-position:center top"></div>
+<div class="fam-body"><span class="tag">Roadmap</span><h3>Manager & Administrator previews</h3><p>Broker operations and platform administration workspaces in preview — request a walkthrough to see the current state.</p><a class="more" href="contact.html">Request a walkthrough</a></div></article>
+</div></div></section>"""
+    + band_cta("Stay in the loop.", "Contact us for release updates relevant to your implementation.", "Contact Us", "contact.html"))
+
+# ---------------- careers.html ----------------
+page("careers.html",
+    "Careers — Work at QuotesWare",
+    "Open roles and working principles at QuotesWare Technologies.",
+    "assets/products/orbit-trader-suite.png",
+    hero("Careers", "Careers", "Build trading<br>technology with us.",
+         "We're a focused team building modern trading infrastructure. Current openings are listed below — honestly.",
+         [],
+         "assets/products/orbit-trader-suite.png", "Careers at QuotesWare")
+    + """<section class="section alt"><div class="wrap">
+<div class="sec-head rv"><span class="eyebrow">Open roles</span><h2>No current openings.</h2><p>We're not hiring right now. When roles open, they'll be listed here with real descriptions — never placeholders.</p></div>
+<div class="feat-grid">"""
+    + feat("code", "Engineering", "Trading terminals, broker operations, feeds and infrastructure.")
+    + feat("chart", "Product & Design", "Interfaces traders and broker teams rely on every day.")
+    + feat("users", "Growth & Partnerships", "Working with brokerages adopting the Orbit stack.")
+    + """</div>
+<div class="band-cta rv" style="margin-top:44px"><div><h2>Interested in the future?</h2><p>Send your background and what you'd like to build — we'll keep it on file.</p></div><a class="btn btn-primary" href="contact.html">Get in Touch</a></div>
+</div></section>"""
+    + band_cta("Want to follow our progress?", "News and releases are published as they happen.", "See News", "news.html"))
+
+# ---------------- media.html ----------------
+page("media.html",
+    "Media Kit — QuotesWare Brand Assets",
+    "Official QuotesWare Technologies logos, brand colors, product screenshots and company boilerplate for press and partners.",
+    "assets/products/orbit-ecosystem-hero.png",
+    hero("Media Kit", "For press & partners", "QuotesWare,<br>presented properly.",
+         "Official logos, brand colors, product visuals and boilerplate — with simple usage guidelines.",
+         [],
+         "assets/products/orbit-ecosystem-hero.png", "QuotesWare media kit")
+    + """<section class="section alt"><div class="wrap">
+<div class="sec-head rv"><span class="eyebrow">Brand assets</span><h2>Logos & colors.</h2></div>
+<div class="feat-grid">"""
+    + feat("star", "Primary Logo", "Full-color QuotesWare mark for light backgrounds. Download: assets/logo.png")
+    + feat("check", "Reversed Logo", "White version for dark backgrounds. Download: assets/logo-light.png")
+    + feat("layers", "Brand Colors", "Deep Navy #071B36 · Teal #12D0BB · Blue #0A4A8A · Background #F7FAFC")
+    + """</div></div></section>"""
+    + """<section class="section tint"><div class="wrap">
+<div class="sec-head rv"><span class="eyebrow">Product visuals</span><h2>Approved screenshots.</h2><p>Current product renders approved for editorial and partner use.</p></div>
+<div class="fam-grid">
+<article class="fam-card rv"><div class="fam-shot"><img src="assets/products/orbit-ecosystem-hero.png" alt="Orbit ecosystem" loading="lazy" style="object-position:center"></div><div class="fam-body"><h3>Ecosystem hero</h3><p>Manager, Trader terminal and mobile together.</p></div></article>
+<article class="fam-card rv d1"><div class="fam-shot"><img src="assets/products/orbit-trader-devices.png" alt="Orbit Trader devices" loading="lazy" style="object-position:center"></div><div class="fam-body"><h3>Trader devices</h3><p>Desktop terminal and mobile apps.</p></div></article>
+<article class="fam-card rv d2"><div class="fam-shot"><img src="assets/products/crop-manager.png" alt="Orbit Manager" loading="lazy" style="object-position:center top"></div><div class="fam-body"><h3>Orbit Manager</h3><p>Broker operations dashboard.</p></div></article>
+</div></div></section>"""
+    + """<section class="section alt"><div class="wrap split">
+<div class="rv"><span class="eyebrow">Boilerplate</span><h2>Company description.</h2>
+<p class="lede">"QuotesWare Technologies builds modern trading infrastructure — Orbit Trader for traders, Orbit Manager and Orbit Administrator for brokerages, plus white label, connectivity and APIs."</p>
+""" + checklist(["Don't stretch, recolor or rearrange the logo", "Don't place the logo on clashing backgrounds", "Don't imply endorsement or partnership without agreement"]) + """
+</div><div class="rv d1"><div class="form-card"><h3 style="margin-bottom:12px">Press contact</h3><p style="color:var(--muted);margin-bottom:20px">For interviews, assets and partnership inquiries.</p><a class="btn btn-primary" href="contact.html">Contact Us</a></div></div>
+</div></section>"""
+    + band_cta("Need something specific?", "Ask for the asset or information you need.", "Contact Us", "contact.html"))
+
+# ---------------- privacy.html ----------------
+page("privacy.html",
+    "Privacy Policy",
+    "How QuotesWare Technologies handles information submitted through this website.",
+    "assets/products/orbit-ecosystem-hero.png",
+    hero("Legal", "Privacy policy", "Your privacy,<br>stated plainly.",
+         "What this website collects, why, and your choices. Last updated: October 2026.",
+         [],
+         "assets/products/orbit-ecosystem-hero.png", "QuotesWare privacy")
+    + """<section class="section alt"><div class="wrap" style="max-width:46rem">
+<div class="rv">
+<h2 style="font-size:24px;margin-bottom:12px">What we collect</h2>
+<p style="color:var(--muted);margin-bottom:28px">If you submit the demo request form, we receive the details you provide: name, work email, company, role, company type and message. We use this only to respond to your inquiry about our products.</p>
+<h2 style="font-size:24px;margin-bottom:12px">What we don't do</h2>
+<p style="color:var(--muted);margin-bottom:28px">We don't sell personal information. We don't run advertising trackers on this site. We don't collect information you don't explicitly provide.</p>
+<h2 style="font-size:24px;margin-bottom:12px">Cookies</h2>
+<p style="color:var(--muted);margin-bottom:28px">This site uses only essential technical storage (such as remembering a form draft on your own device). See our <a href="cookies.html" style="color:var(--blue);font-weight:700">cookie notice</a>.</p>
+<h2 style="font-size:24px;margin-bottom:12px">Your choices</h2>
+<p style="color:var(--muted);margin-bottom:28px">To ask what we hold about you, or to ask for it to be removed, contact us via the <a href="contact.html" style="color:var(--blue);font-weight:700">contact page</a>.</p>
+<p style="color:var(--muted);font-size:14px">This page is general information, not legal advice. Specific data-processing terms are agreed per implementation.</p>
+</div></div></section>"""
+    + band_cta("Questions about privacy?", "Ask us directly.", "Contact Us", "contact.html"))
+
+# ---------------- terms.html ----------------
+page("terms.html",
+    "Terms of Use",
+    "Terms for using the QuotesWare Technologies website.",
+    "assets/products/orbit-ecosystem-hero.png",
+    hero("Legal", "Terms of use", "The fine print,<br>in plain language.",
+         "The rules for using this website. Last updated: October 2026.",
+         [],
+         "assets/products/orbit-ecosystem-hero.png", "QuotesWare terms")
+    + """<section class="section alt"><div class="wrap" style="max-width:46rem">
+<div class="rv">
+<h2 style="font-size:24px;margin-bottom:12px">What this site is</h2>
+<p style="color:var(--muted);margin-bottom:28px">This website describes the software products of QuotesWare Technologies. Product descriptions, roadmaps and availability statements reflect the current state of development and may change.</p>
+<h2 style="font-size:24px;margin-bottom:12px">Not financial advice</h2>
+<p style="color:var(--muted);margin-bottom:28px">Nothing on this site is investment advice or an offer of financial services. QuotesWare Technologies provides trading software technology only — it does not provide investment, brokerage or financial services and does not accept client funds.</p>
+<h2 style="font-size:24px;margin-bottom:12px">Intellectual property</h2>
+<p style="color:var(--muted);margin-bottom:28px">The QuotesWare name, logo, Orbit product names and site content belong to QuotesWare Technologies or its licensors. Don't copy or reuse them without permission — see the <a href="media.html" style="color:var(--blue);font-weight:700">media kit</a> for approved uses.</p>
+<h2 style="font-size:24px;margin-bottom:12px">Acceptable use</h2>
+<p style="color:var(--muted);margin-bottom:28px">Don't misuse the contact forms, attempt to disrupt the site, or misrepresent your identity when contacting us.</p>
+<p style="color:var(--muted);font-size:14px">This page is general information, not legal advice.</p>
+</div></div></section>"""
+    + band_cta("Questions about these terms?", "Ask us directly.", "Contact Us", "contact.html"))
+
+# ---------------- cookies.html ----------------
+page("cookies.html",
+    "Cookie Notice",
+    "How QuotesWare Technologies uses cookies and local storage on this website.",
+    "assets/products/orbit-ecosystem-hero.png",
+    hero("Legal", "Cookie notice", "Cookies,<br>kept minimal.",
+         "What this site stores on your device and why. Last updated: October 2026.",
+         [],
+         "assets/products/orbit-ecosystem-hero.png", "QuotesWare cookies")
+    + """<section class="section alt"><div class="wrap" style="max-width:46rem">
+<div class="rv">
+<h2 style="font-size:24px;margin-bottom:12px">Essential storage</h2>
+<p style="color:var(--muted);margin-bottom:28px">This website may store a draft of your demo request form on your own device (local storage) so you don't lose what you typed. This never leaves your browser unless you submit the form.</p>
+<h2 style="font-size:24px;margin-bottom:12px">No tracking cookies</h2>
+<p style="color:var(--muted);margin-bottom:28px">We don't use advertising trackers, cross-site tracking cookies or third-party analytics beacons on this site. If that changes, this notice will be updated first.</p>
+<h2 style="font-size:24px;margin-bottom:12px">Your control</h2>
+<p style="color:var(--muted);margin-bottom:28px">You can clear site storage at any time in your browser settings — the site keeps working without it.</p>
+<p style="color:var(--muted);font-size:14px">This page is general information, not legal advice.</p>
+</div></div></section>"""
+    + band_cta("Questions?", "Ask us directly.", "Contact Us", "contact.html"))
+
+# ---------------- institutions.html ----------------
+page("institutions.html",
+    "For Institutions — Funds, Prop Firms & Enterprises",
+    "Orbit technology for hedge funds, prop firms and financial institutions: multi-asset trading, APIs and broker-grade operations.",
+    "assets/products/orbit-ecosystem-hero.png",
+    hero("For Institutions", "For institutions", "Institutional workflows,<br>modern stack.",
+         "For hedge funds, prop firms and financial institutions that need professional trading technology without legacy drag.",
+         ['<a class="btn btn-primary" href="contact.html">Talk to Sales</a>', '<a class="btn btn-ghost" href="developers.html">APIs</a>'],
+         "assets/products/orbit-ecosystem-hero.png", "Orbit technology for institutions")
+    + """<section class="section alt"><div class="wrap">
+<div class="sec-head rv"><span class="eyebrow">Use cases</span><h2>Built for professional scale.</h2></div>
+<div class="feat-grid">"""
+    + feat("chart", "Multi-Asset Trading", "FX, metals, crypto, indices and stocks through one terminal and one feed.")
+    + feat("code", "Programmatic Access", "REST, WebSocket and webhooks available today; FIX on the roadmap.")
+    + feat("users", "Team Operations", "Manager workspaces for client and exposure oversight.")
+    + feat("cog", "Platform Control", "Administrator control over symbols, groups, permissions and conditions.")
+    + feat("star", "White Label", "Branded deployment for client-facing offerings.")
+    + feat("shield", "Governance", "Role-based access and audit trails designed for oversight.")
+    + """</div></div></section>"""
+    + """<section class="section tint"><div class="wrap split flip">
+<div class="vis tintbg rv"><img class="main" src="assets/products/crop-manager.png" alt="Operations workspace" loading="lazy"></div>
+<div class="rv d1"><span class="eyebrow">Prop firms</span><h2>Challenges, the clean way.</h2>
+<p class="lede">Prop firms can run evaluation and funded workflows on the Orbit stack with clear account operations and reporting.</p>
+""" + checklist(["Account operations & grouping", "Performance & activity reporting", "Risk visibility", "API-driven workflows"]) + """
+<a class="btn btn-primary" href="contact.html">Discuss Your Model</a></div></div></section>"""
+    + band_cta("Tell us about your institution.", "We'll map the Orbit stack to your workflows.", "Talk to Sales", "contact.html"))
+
+print("batch 4 done")
