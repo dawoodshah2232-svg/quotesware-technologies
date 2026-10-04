@@ -90,10 +90,10 @@ def hero(img, eyebrow, title, lede, buttons, alt, label, variant="split"):
     if variant == "center":
         return f"""<section class="hero hero-center"><div class="wrap">{c}<span class="eyebrow rv">{eyebrow}</span><h1 class="rv">{title}</h1><p class="lede rv d1">{lede}</p><div class="hero-btns rv d2">{btns}</div><div class="vis rv d3"><img class="main" src="{img}" alt="{alt}" loading="lazy"></div></div></section>"""
     vcls = {"split": "", "flip": " flip", "dark": " dark", "light": " light"}[variant]
-    text = f"""<div class="rv d1">{c}<span class="eyebrow">{eyebrow}</span><h1>{title}</h1><p class="lede">{lede}</p><div class="hero-btns">{btns}</div></div>"""
-    vis = f"""<div class="vis rv"><img class="main" src="{img}" alt="{alt}" loading="lazy"></div>"""
-    inner = vis + text if variant == "flip" else text + vis
-    return f"""<section class="hero{vcls}"><div class="wrap split">{inner}</div></section>"""
+    return f"""<section class="hero{vcls}"><div class="wrap split">
+<div class="vis rv"><img class="main" src="{img}" alt="{alt}" loading="lazy"></div>
+<div class="rv d1">{c}<span class="eyebrow">{eyebrow}</span><h1>{title}</h1><p class="lede">{lede}</p><div class="hero-btns">{btns}</div></div>
+</div></section>"""
 
 def feat(icon, t, d):
     return f"""<div class="feat-card rv"><div class="fic">{ICONS[icon]}</div><h3>{t}</h3><p>{d}</p></div>"""
