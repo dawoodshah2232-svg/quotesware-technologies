@@ -4,6 +4,14 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var finePointer = window.matchMedia("(pointer: fine)").matches;
 
+  /* ---- Hero logo entrance (no box behind it — the logo is the hero) ---- */
+  var heroLogo = document.getElementById("heroLogo");
+  if (heroLogo && !reduceMotion){
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){ heroLogo.classList.add("in"); });
+    });
+  }
+
   /* ---- Word-by-word splitting ---- */
   function splitWords(el){
     var text = el.textContent.trim().split(/\s+/);
@@ -89,9 +97,9 @@
   if (canvas && !reduceMotion){
     var ctx = canvas.getContext("2d");
     var blobs = [
-      { x:.22, y:.30, r:.34, c:"46,91,255",  a:.34, sx:.00016, sy:.00011, p:0.0 },
-      { x:.78, y:.62, r:.30, c:"120,80,255", a:.22, sx:.00012, sy:.00017, p:2.1 },
-      { x:.55, y:.18, r:.24, c:"40,200,255", a:.16, sx:.00019, sy:.00009, p:4.2 }
+      { x:.22, y:.30, r:.34, c:"0,179,164",  a:.30, sx:.00016, sy:.00011, p:0.0 },
+      { x:.78, y:.62, r:.30, c:"0,90,160",   a:.20, sx:.00012, sy:.00017, p:2.1 },
+      { x:.55, y:.18, r:.24, c:"0,140,130",  a:.16, sx:.00019, sy:.00009, p:4.2 }
     ];
     var W, H, t0 = performance.now();
     function size(){

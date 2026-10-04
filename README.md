@@ -1,21 +1,19 @@
-# QuotesWare Technologies
+# QuotesWare Technologies — company website
 
-Company website for **QuotesWare Technologies** — software, engineered.
+Apple-style single-page company site. Live preview: https://dawoodshah2232-svg.github.io/quotesware-technologies/
 
-Premium Apple-style single-page site: dark navy hero with animated gradient canvas, word-by-word headline reveals, scroll-staggered service cards, magnetic buttons, 3D tilt cards (desktop), tech marquee, animated hide/reveal nav, mobile menu, contact form.
+## Brand
+Sampled from the official logo (`assets/logo.png`):
+- Navy `#003063` (wordmark "Quotes" + "TECHNOLOGIES")
+- Teal `#00B3A4` (mark + "ware")
+- Deep navy `#050D24` for hero/footer backgrounds
 
-## Preview
+## Logo assets (`assets/`)
+- `logo.png` — official logo, white background stripped to transparent. Use on light backgrounds.
+- `logo-light.png` — light variant: navy parts recolored white, teal kept. Use on dark backgrounds.
+- `favicon-16/32.png`, `apple-touch-icon.png` — cropped from the hexagonal Q mark.
 
-https://dawoodshah2232-svg.github.io/quotesware-technologies/
+Rule: never put any card/box behind the logo — it always sits directly on the page background.
 
-## Structure
-
-- `index.html` — page markup (hero, tech strip, services, process, about, CTA, contact, footer)
-- `styles.css` — Apple font stack, light premium theme, mobile-first responsive, `prefers-reduced-motion` support
-- `script.js` — motion layer (no frameworks): IntersectionObserver reveals, canvas blobs, magnetic buttons, tilt, parallax hero lift
-
-## Notes
-
-- No invented stats, testimonials, clients or addresses anywhere on the page.
-- Contact form is front-end only — wire it to an inbox/CRM on the content pass.
-- Motion respects `prefers-reduced-motion`; pointer effects are desktop-only enhancements.
+## Honest shell
+No invented stats, testimonials, clients or addresses. Contact form is front-end only (wire to inbox on content pass).
