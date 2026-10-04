@@ -1,19 +1,27 @@
-# QuotesWare Technologies — company website
+# QuotesWare Technologies — Corporate Website v5
 
-Apple-style single-page company site. Live preview: https://dawoodshah2232-svg.github.io/quotesware-technologies/
+Multi-page corporate product website for QuotesWare Technologies.
 
-## Brand
-Sampled from the official logo (`assets/logo.png`):
-- Navy `#003063` (wordmark "Quotes" + "TECHNOLOGIES")
-- Teal `#00B3A4` (mark + "ware")
-- Deep navy `#050D24` for hero/footer backgrounds
+Live: https://dawoodshah2232-svg.github.io/quotesware-technologies/
 
-## Logo assets (`assets/`)
-- `logo.png` — official logo, white background stripped to transparent. Use on light backgrounds.
-- `logo-light.png` — light variant: navy parts recolored white, teal kept. Use on dark backgrounds.
-- `favicon-16/32.png`, `apple-touch-icon.png` — cropped from the hexagonal Q mark.
+## Site architecture
+- Home
+- Trading Platform
+- Trader
+- Manager
+- Administrator
+- White Label
+- Connectivity
+- Developer Platform
+- Security
+- For Brokers
+- Downloads
+- Company
+- Resources / Roadmap
+- Contact / Request Demo
 
-Rule: never put any card/box behind the logo — it always sits directly on the page background.
+## Design direction
+Light-first institutional trading-technology UI using the QuotesWare navy + teal brand. The site presents Trader, broker operations, platform control and integration architecture as one connected product family.
 
-## Honest shell
-No invented stats, testimonials, clients or addresses. Contact form is front-end only (wire to inbox on content pass).
+## Product honesty
+Preview and roadmap capabilities are labeled as such. Download links are not published until signed production artifacts exist. The request-demo form currently saves a local draft only because no production inbox/CRM endpoint has been connected yet; it does not show a false sent-success state.
