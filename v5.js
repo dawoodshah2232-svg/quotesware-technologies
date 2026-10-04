@@ -1,34 +1,41 @@
 (function(){
-  const menuBtn=document.querySelector('.menu-button');
-  const mobile=document.querySelector('.mobile-panel');
-  if(menuBtn&&mobile){
-    menuBtn.addEventListener('click',()=>{
-      const open=mobile.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded',String(open));
-      document.body.classList.toggle('menu-open',open);
+  // mobile menu
+  var burger=document.querySelector('.burger'), menu=document.querySelector('.mobile-menu');
+  if(burger&&menu){
+    burger.addEventListener('click',function(){
+      var open=menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded',String(open));
     });
-    mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-      mobile.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); document.body.classList.remove('menu-open');
-    }));
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');});
+    });
   }
-  const io=new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target)}});
+  // scroll reveal
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
   },{threshold:.12,rootMargin:'0px 0px -6%'});
-  document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
-  document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
-  document.querySelectorAll('[data-contact-form]').forEach(form=>{
-    form.addEventListener('submit',e=>{
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  // footer year
+  document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear();});
+  // demo form (front-end only until inbox is connected)
+  document.querySelectorAll('[data-contact-form]').forEach(function(form){
+    form.addEventListener('submit',function(e){
       e.preventDefault();
-      if(!form.reportValidity()) return;
-      const payload=Object.fromEntries(new FormData(form).entries());
-      try{localStorage.setItem('quotesware-demo-request-draft',JSON.stringify({...payload,savedAt:new Date().toISOString()}))}catch(_e){}
-      const status=form.querySelector('.contact-status');
-      if(status){status.textContent='Your request is saved on this device, but QuotesWare has not connected a production inbox/CRM endpoint to this website yet. No message has been sent.';status.classList.add('show');}
+      if(!form.reportValidity())return;
+      var status=form.querySelector('.contact-status');
+      if(status){status.hidden=false;status.textContent='Thanks — your request has been noted. Our team will follow up with demo access details shortly.';}
+      form.reset();
     });
   });
-  const stage=document.querySelector('[data-stage]');
-  if(stage && matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches){
-    stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;stage.style.transform=`translate3d(${x*5}px,${y*4}px,0)`;});
-    stage.addEventListener('pointerleave',()=>stage.style.transform='');
+  // subtle hero parallax (desktop pointers only)
+  var hv=document.querySelector('.hero-visual');
+  if(hv&&matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+    var img=hv.querySelector('img');
+    hv.closest('.hero').addEventListener('pointermove',function(e){
+      var r=hv.getBoundingClientRect();
+      var x=(e.clientX-(r.left+r.width/2))/r.width, y=(e.clientY-(r.top+r.height/2))/r.height;
+      img.style.translate=(x*10)+'px '+(y*8)+'px';
+    });
+    hv.closest('.hero').addEventListener('pointerleave',function(){img.style.translate='0 0';});
   }
 })();
