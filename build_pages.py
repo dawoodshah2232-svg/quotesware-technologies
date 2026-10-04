@@ -426,7 +426,7 @@ page("developers.html", "Developer Platform — APIs for the Orbit Stack",
 # ================= DOWNLOADS (center hero + platform cards) =================
 page("downloads.html", "Downloads — Orbit Trader for Web, Android & Windows",
      "Get Orbit Trader: zero-install web terminal, Android app and Windows desktop — availability and system requirements.",
-     hero("assets/products/orbit-ecosystem-hero.png", "Downloads", "Get Orbit Trader.<br>On every screen.",
+     hero("assets/products/orbit-ecosystem-mix.png", "Downloads", "Get Orbit Trader.<br>On every screen.",
           "Web, Android and Windows — choose your platform. Client apps are distributed through your brokerage.",
           [], "Orbit Trader on all devices", "Downloads", "center")
      + """<section class="section alt"><div class="wrap">
