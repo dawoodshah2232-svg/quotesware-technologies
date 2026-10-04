@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/platform.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/trader.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/manager.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/administrator.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/white-label.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/connectivity.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/developers.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/security.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/brokers.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/downloads.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/company.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/resources.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dawoodshah2232-svg.github.io/quotesware-technologies/contact.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
